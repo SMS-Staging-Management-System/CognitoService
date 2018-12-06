@@ -22,7 +22,20 @@ This service is creating using AWS API Gateway as well as AWS Lambdas and AWS Co
   <_Most endpoints will have many ways they can fail. From unauthorized access, to wrongful parameters etc. All of those should be liste d here. It might seem repetitive, but it helps prevent assumptions from being made where they should be._>
 
   * **Code:** 200 SUCCESS <br />
-    **Content:** ``
+    **Content:** `{  
+      "sub": "a993f745-d063-4321-ac6e-fd9a18f8b931",  
+      "aud": "49f1foekljhlqn185fme63hi0s",  
+      "cognito:groups": "admin,staging-manager",  
+      "email_verified": "true",  
+      "event_id": "280fba4a-f971-11e8-9419-c77846ddcac6",  
+      "token_use": "id",  
+      "auth_time": "1544112503",  
+      "iss": "https://cognito-idp.us-west-2.amazonaws.com/us-west-2_8b6WpHm1z",  
+      "cognito:username": "a993f745-d063-4321-ac6e-fd9a18f8b931",  
+      "exp": "Thu Dec 06 17:08:23 UTC 2018",  
+      "iat": "Thu Dec 06 16:08:23 UTC 2018",  
+      "email": "blake.kruppa@revature.com"  
+  }`
   
   OR
 
