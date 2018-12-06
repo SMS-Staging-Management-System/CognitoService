@@ -38,21 +38,27 @@ This service is creating using AWS API Gateway as well as AWS Lambdas and AWS Co
       "iat": "Thu Dec 06 16:08:23 UTC 2018",  
       "email": "blake.kruppa@revature.com"  
     }
-  ```
+    ```  
   
   OR
 
   * **Code:** 401 UNAUTHORIZED <br />
-    **Content:** `{
-    "message": "The incoming token has expired"
-    }`
+    **Content:** 
+    ```json
+    {
+      "message": "The incoming token has expired"
+    }
+    ```
 
   OR 
  
   * **Code:** 401 UNAUTHORIZED <br />
-    **Content:** `{
-    "message": "Unauthorized"
-    }`  
+    **Content:** 
+    ```json
+    {
+      "message": "Unauthorized"
+    }
+    ```    
     Occurs if there is no token attached
 
 * **Sample Call:**
