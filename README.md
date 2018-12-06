@@ -15,13 +15,6 @@ This service is creating using AWS API Gateway as well as AWS Lambdas and AWS Co
 
 * **Success Response:**
   * **Code:** 200  
-    **Content:** `{ id : 12 }`
- 
-* **Error Response:**
-
-  <_Most endpoints will have many ways they can fail. From unauthorized access, to wrongful parameters etc. All of those should be liste d here. It might seem repetitive, but it helps prevent assumptions from being made where they should be._>
-
-  * **Code:** 200 SUCCESS <br />
     **Content:** 
     ```json
     {  
@@ -39,8 +32,8 @@ This service is creating using AWS API Gateway as well as AWS Lambdas and AWS Co
       "email": "blake.kruppa@revature.com"  
     }
     ```  
-  
-  OR
+ 
+* **Error Response:**
 
   * **Code:** 401 UNAUTHORIZED <br />
     **Content:** 
@@ -62,14 +55,24 @@ This service is creating using AWS API Gateway as well as AWS Lambdas and AWS Co
     Occurs if there is no token attached
 
 
-* **Headers:**
+* **Headers:**  
    `Authentication`: The access token provided by cognito.
 
 
+**Register New User**
 
+* **URL**
 
-* **Code:** 401 UNAUTHORIZED <br />
-    **Content:** `{
+ `/cognito/users`
+
+* **Method:**
+  `POST`
+
+* **Success Response:**
+  * **Code:** 200  
+    **Content:** 
+    ```json
+    {
       "User": {
           "Username": "01e05880-930d-4150-a9e0-6c515b546416",
           "Attributes": [
@@ -87,5 +90,30 @@ This service is creating using AWS API Gateway as well as AWS Lambdas and AWS Co
           "Enabled": true,
           "UserStatus": "FORCE_CHANGE_PASSWORD"
       }
-  }`
-  
+    }
+    ```
+ 
+* **Error Response:**
+
+  * **Code:** 401 UNAUTHORIZED <br />
+    **Content:** 
+    ```json
+    {
+      "message": "The incoming token has expired"
+    }
+    ```
+
+  OR 
+ 
+  * **Code:** 401 UNAUTHORIZED <br />
+    **Content:** 
+    ```json
+    {
+      "message": "Unauthorized"
+    }
+    ```    
+    Occurs if there is no token attached
+
+
+* **Headers:**  
+   `Authentication`: The access token provided by cognito.
