@@ -37,7 +37,7 @@ This service is creating using AWS API Gateway as well as AWS Lambdas and AWS Co
       "exp": "Thu Dec 06 17:08:23 UTC 2018",  
       "iat": "Thu Dec 06 16:08:23 UTC 2018",  
       "email": "blake.kruppa@revature.com"  
-  }
+    }
   ```
   
   OR
