@@ -61,13 +61,9 @@ This service is creating using AWS API Gateway as well as AWS Lambdas and AWS Co
     ```    
     Occurs if there is no token attached
 
-* **Sample Call:**
 
-  <_Just a sample call to your endpoint in a runnable format ($.ajax call or a curl request) - this makes life easier and more predictable._> 
-
-* **Notes:**
-
-  <_This is where all uncertainties, commentary, discussion etc. can go. I recommend timestamping and identifying oneself when leaving comments here._> 
+* **Headers:**
+   `Authentication`: The access token provided by cognito.
 
 
 
