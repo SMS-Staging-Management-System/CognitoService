@@ -23,17 +23,17 @@ This service is creating using AWS API Gateway as well as AWS Lambdas and AWS Co
 
   * **Code:** 200 SUCCESS <br />
     **Content:** ``
-
+  
   OR
 
   * **Code:** 401 UNAUTHORIZED <br />
     **Content:** `{
     "message": "The incoming token has expired"
     }`
+
+  OR 
  
- OR 
- 
- * **Code:** 401 UNAUTHORIZED <br />
+  * **Code:** 401 UNAUTHORIZED <br />
     **Content:** `{
     "message": "Unauthorized"
     }`  
