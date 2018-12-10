@@ -8,7 +8,8 @@ This service is creating using AWS API Gateway as well as AWS Lambdas and AWS Co
 
 * **URL**
 
- `/cognito/auth`
+ `/cognito/auth`  
+ Changed from `/auth` - currently both work but `/auth` will be removed in the future
 
 * **Method:**
   `GET`
