@@ -12,7 +12,10 @@ This service is creating using AWS API Gateway as well as AWS Lambdas and AWS Co
  Changed from `/auth` - currently both work but `/auth` will be removed in the future
 
 * **Method:**
-  `GET`
+  `GET`  
+  
+* **Headers:**  
+   `Authentication`: The access token provided by cognito.
 
 * **Success Response:**
   * **Code:** 200  
@@ -56,10 +59,6 @@ This service is creating using AWS API Gateway as well as AWS Lambdas and AWS Co
     Occurs if there is no token attached
 
 
-* **Headers:**  
-   `Authentication`: The access token provided by cognito.
-
-
 **Register New User**
 
 * **URL**
@@ -67,7 +66,10 @@ This service is creating using AWS API Gateway as well as AWS Lambdas and AWS Co
  `/cognito/users`
 
 * **Method:**
-  `POST`
+  `POST`  
+  
+* **Headers:**  
+   `Authentication`: The access token provided by cognito.
 
 * **Success Response:**
   * **Code:** 200  
@@ -116,5 +118,4 @@ This service is creating using AWS API Gateway as well as AWS Lambdas and AWS Co
     Occurs if there is no token attached
 
 
-* **Headers:**  
-   `Authentication`: The access token provided by cognito.
+
